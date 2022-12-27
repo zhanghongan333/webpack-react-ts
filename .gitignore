@@ -1,0 +1,8 @@
+node_modules/
+dist/*
+*.zip
+*.xml
+*.iml
+report.*.json
+.history
+package-lock.json
