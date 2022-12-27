@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin=require('html-webpack-plugin')
+const { webpack,DefinePlugin  } = require('webpack')
 
 module.exports={
     entry:path.join(__dirname,'../src/index.tsx'),
@@ -23,6 +24,24 @@ module.exports={
                         ]
                     }
                 }
+            },
+            {
+                test:/.(css|less|scss)$/,
+                use:[
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    // {
+                    //     loader:'postcss-loader',
+                    //     options:{
+                    //         postcssOptions:{
+                    //             plugins:['autoprefixer']
+                    //         }
+                    //     }
+                    // },
+                    'less-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
@@ -33,6 +52,12 @@ module.exports={
         new HtmlWebpackPlugin({
             template:path.resolve(__dirname,'../public/index.html'),//模板取定义root节点的模板
             inject:true,//自动注入静态资源
+        }),
+        new DefinePlugin({
+            'process.env.BASE_ENV':JSON.stringify(process.env.BASE_ENV),
+            'process.env.NODE_ENV':JSON.stringify(process.env.NODE_ENV)
         })
     ]
 }
+console.log('webpack_NODE_ENV',process.env.NODE_ENV)
+console.log('webpack_BASE_ENV',process.env.BASE_ENV)

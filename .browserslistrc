@@ -1,0 +1,3 @@
+# 兼容浏览器的清单,让postcss-loader知道要加哪些浏览器的前缀
+IE 9 #兼容IE 9
+chrome 35 # 兼容chrome 35
