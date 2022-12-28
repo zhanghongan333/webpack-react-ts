@@ -16,14 +16,13 @@ module.exports={
                 test:/.(ts|tsx)$/,
                 use:{
                     loader:'babel-loader',
-                    options:{
-                    // 预设执行顺序由右往左，所以先处理ts，再处理jsx
-                        presets:[
-                            '@babel/preset-react',
-                            '@babel/preset-typescript'
-                        ]
-                    }
                 }
+                // ,
+                // 如果node_moduels中也有要处理的语法，可以把js|jsx文件配置上
+                // {
+                //     test:/.(js|jsx)$/,
+                //     use:'bable-loader'
+                // }
             },
             {
                 test:/.(css|less|scss)$/,
