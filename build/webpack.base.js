@@ -91,8 +91,7 @@ module.exports={
             inject:true,//自动注入静态资源
         }),
         new DefinePlugin({
-            'process.env.BASE_ENV':JSON.stringify(process.env.BASE_ENV),
-            'process.env.NODE_ENV':JSON.stringify(process.env.NODE_ENV)
+            'process.env.BASE_ENV':JSON.stringify(process.env.BASE_ENV),  
         })
     ]
 }
