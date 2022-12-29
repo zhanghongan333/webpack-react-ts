@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV ==='development'//是否是开发模式
 module.exports={
     entry:path.join(__dirname,'../src/index.tsx'),
     output:{
-        filename:'static/js/[name].js',//每个输出就是的名称
+        filename:'static/js/[name].[chunkhash:8].js',//每个输出就是的名称
         path:path.join(__dirname,'../dist'),
         clean:true,//wabpack4需要配置clean-wabpack-plugin来删除dist文件，webpack5内置了
         publicPath:''//打包后文件的公共前缀路径
@@ -56,7 +56,7 @@ module.exports={
                     }
                 },
                 generator:{
-                    filename:"static/images/[name][ext]"//文件输出目录和命名
+                    filename:"static/images/[name][contenthash:8][ext]"//文件输出目录和命名
                 },
 
             },
@@ -69,7 +69,7 @@ module.exports={
                     }
                 },
                 generator:{
-                    filename:'static/fonts/[name][ext]',//文件输出目录和命名
+                    filename:'static/fonts/[name][contenthash:8][ext]',//文件输出目录和命名
                 }
             },
             {
@@ -81,7 +81,7 @@ module.exports={
                     }
                 },
                 generator:{
-                    filename:'static/media/[name][ext]'//文件输出目录和命名
+                    filename:'static/media/[name][contenthash:8][ext]'//文件输出目录和命名
                 }
             },
             // {
