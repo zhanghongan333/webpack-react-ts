@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
-import './app.css'
-import './app.less'
-import './app.scss'
-import smallImg from './assets/images/4kb.png'
-import bigImg from './assets/images/22kb.png'
+import '@/app.css'
+import '@/app.less'
+import '@/app.scss'
+import smallImg from '@/assets/images/4kb.png'
+import bigImg from '@/assets/images/22kb.png'
 
 function App(){
     const [count ,setCounts] = useState('')
