@@ -2,4 +2,17 @@
   h2 {
     margin: 20px;
   }
+
+  .App {
+    display: block;
+    height: $app-height;
+
+    @include rounded-corners;
+  }
+}
+
+$app-height: 200px;
+
+@mixin rounded-corners {
+  border-radius: 5px;
 }
