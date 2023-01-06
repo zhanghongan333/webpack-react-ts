@@ -4,7 +4,7 @@ import '@/app.less'
 import '@/app.scss'
 import smallImg from '@/assets/images/4kb.png'
 import bigImg from '@/assets/images/22kb.png'
-import { Demo1, Demo2 } from '@/components'
+import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6, Demo7, Demo8 } from '@/components'
 const LazyDemo = lazy(() => import('@/components/lazyDemo')) //使用import语法配合react的lazy动态引入资源
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   }
   return (
     <>
-      <img src={smallImg} alt='小于10kb' />
+      {/* <img src={smallImg} alt='小于10kb' />
       <img src={bigImg} alt='大于10kb' />
       <div className='smallImg'></div>
       <div className='bigImg'></div>
@@ -28,8 +28,15 @@ function App() {
       <input type='text' value={count} onChange={onChange} />
       <br />
       <p>非受控组件</p>
-      <input type='text' />
+      <input type='text' /> */}
       <Demo1></Demo1>
+      <Demo2></Demo2>
+      <Demo3></Demo3>
+      <Demo4></Demo4>
+      <Demo5></Demo5>
+      {/* <Demo6></Demo6> */}
+      <Demo7></Demo7>
+      <Demo8></Demo8>
       <h2 onClick={onClick}>展示</h2>
       {show && (
         <Suspense fallback={null}>
