@@ -1,0 +1,27 @@
+.g6-component-topbar-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.g6-component-topbar-item {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.g6-component-topbar-item > span {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.ant-switch-small {
+  width: 32px;
+  background-color: #9ca2ac !important;
+}
+
+.ant-switch-checked {
+  background-color: #4096ff !important;
+}
